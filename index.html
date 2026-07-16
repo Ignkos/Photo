@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Улучшение Фото</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Улучшение Фото</h1>
+  <main>
+    <section id="dropzone" class="dropzone">
+      <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.bmp,.heic,.heif" hidden>
+      <div class="dropzone-content">
+        <p><strong>Перетащите изображение сюда</strong></p>
+        <p>или</p>
+        <button id="browseBtn" type="button">Выбрать файл</button>
+        <p class="hint">JPG, PNG, HEIC, BMP · до 15 Мпк</p>
+      </div>
+    </section>
+
+    <section id="previewSection" class="preview-section" hidden>
+      <section id="statusSection" class="status-section" hidden>
+        <div class="status-row">
+          <span id="statusText">—</span>
+          <button id="cancelBtn" type="button" class="secondary small" hidden>Отменить</button>
+        </div>
+        <div class="progress-track">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <button id="downloadBtn" type="button" class="small" hidden>Скачать результат</button>
+      </section>
+
+      <div class="preview-card">
+        <figure class="preview-figure">
+          <img id="previewImgBefore" alt="Изображение до обработки">
+          <figcaption>До</figcaption>
+        </figure>
+        <figure class="preview-figure">
+          <img id="previewImgAfter" alt="Изображение после обработки">
+          <figcaption>После</figcaption>
+        </figure>
+      </div>
+      <dl class="meta">
+        <div><dt>Файл</dt><dd id="metaName">—</dd></div>
+        <div><dt>Формат</dt><dd id="metaType">—</dd></div>
+        <div><dt>Размер файла</dt><dd id="metaSize">—</dd></div>
+        <div><dt>Разрешение</dt><dd id="metaRes">—</dd></div>
+        <div><dt>Мегапиксели</dt><dd id="metaMp">—</dd></div>
+      </dl>
+      <p id="metaWarning" class="warning" hidden></p>
+      <button id="clearBtn" type="button" class="secondary">Убрать изображение</button>
+    </section>
+  </main>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
