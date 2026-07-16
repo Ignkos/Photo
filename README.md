@@ -6,7 +6,3 @@
 
 Поддерживает JPG, PNG, BMP, HEIC. Фото до 15 Мпк, крупнее сжимаются
 перед обработкой. Обработка идёт в фоновом потоке.
-
-Файлы: index.html, style.css, app.js, taskQueue.js,
-imageProcessor.worker.js, colorAdjust.js, mlModel.js, mlWeights.json,
-heicSupport.js, vendor/heic2any.min.js
